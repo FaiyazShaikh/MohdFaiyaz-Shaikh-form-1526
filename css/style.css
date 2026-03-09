@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --btn-bg: #008eda;
+  --dark-gray: #bfbfbf;
+  --white: #ffffff;
+  --gray: #eaeaea;
+  --heading-font: "Merriweather", serif;
+  --body-font: "Nunito", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.5;
+  font-size: 1rem;
+  padding: 2rem 0; 
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 95%;
+  max-width: 50rem;
+  margin: auto;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem 1rem 1rem;
+    border: 1px solid var(--dark-gray);
+    background-color: var(--gray);
+}
+
+legend {
+  background-color: var(--white);
+  border: 1px solid var(--dark-gray);
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-family: var(--heading-font);
+  white-space: nowrap;
+  display: block;
+}
+
+.inputrow {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--dark-gray);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  width: fit-content;
+  background-color: var(--btn-bg);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+@media (min-width: 25rem) {
+  .inputrow-split .input {
+    flex: 1;
+  }
+}
