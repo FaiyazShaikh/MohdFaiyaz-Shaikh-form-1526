@@ -76,6 +76,7 @@ const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/;
 
 // Function to validate form data
 function validateForm(event) {
+       event.preventDefault();
 
     // Empty buckets for storing data and errors
     let data = {};
@@ -122,4 +123,5 @@ function validateForm(event) {
 }
 
 // Register the "click" event
+
 submitBtn.addEventListener('click', validateForm);
